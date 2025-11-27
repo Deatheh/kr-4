@@ -1,0 +1,23 @@
+.technology-card {
+    background-color: white;
+    border-radius: 6px;
+    padding: 22px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 300px;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.new {
+    border: 5px solid rgb(121, 104, 197);
+}
+
+.in-progress {
+    border: 5px solid rgb(228, 214, 17);
+}
+
+.completed {
+    border: 5px solid rgb(12, 235, 68);
+}
