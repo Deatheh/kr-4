@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Deatheh/kr-4/static/css/main.a03d18ac.css",
+    "main.js": "/Deatheh/kr-4/static/js/main.afbfb612.js",
+    "index.html": "/Deatheh/kr-4/index.html",
+    "main.a03d18ac.css.map": "/Deatheh/kr-4/static/css/main.a03d18ac.css.map",
+    "main.afbfb612.js.map": "/Deatheh/kr-4/static/js/main.afbfb612.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a03d18ac.css",
+    "static/js/main.afbfb612.js"
+  ]
+}
