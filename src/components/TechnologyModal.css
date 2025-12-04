@@ -1,0 +1,266 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content.new {
+  border-top: 5px solid rgb(121, 104, 197);
+}
+
+.modal-content.in-progress {
+  border-top: 5px solid rgb(228, 214, 17);
+}
+
+.modal-content.completed {
+  border-top: 5px solid rgb(12, 235, 68);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.close-button {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  font-size: 1.8rem;
+  color: #666;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+  color: #333;
+}
+
+.modal-body {
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+.modal-section {
+  margin-bottom: 28px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.modal-section:last-child {
+  margin-bottom: 0;
+}
+
+.modal-section h3 {
+  color: #34495e;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+  background-color: transparent;
+}
+
+.modal-section p {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0 0 16px 0;
+  font-size: 1.05rem;
+  background-color: transparent;
+}
+
+.modal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.information-content {
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  margin-top: 10px;
+}
+
+.information-content p {
+  margin-bottom: 18px;
+  color: #2d3748;
+  background-color: transparent;
+}
+
+.information-content p:last-child {
+  margin-bottom: 0;
+}
+
+.status-select {
+  padding: 10px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  min-width: 200px;
+  font-weight: 500;
+  color: #2d3748;
+  transition: border-color 0.2s ease;
+  margin-top: 5px;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+.urls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.url-item {
+  padding: 16px 20px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.url-item:hover {
+  background-color: #edf2f7;
+  border-color: #cbd5e0;
+  transform: translateX(4px);
+}
+
+.url-link {
+  color: #2c5282;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.url-link::before {
+  content: "🔗";
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.url-link:hover {
+  color: #1a365d;
+  text-decoration: none;
+}
+
+.modal-footer {
+  padding: 20px 30px;
+  border-top: 1px solid #eaeaea;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Стили для селектора статуса */
+.status-select option {
+  padding: 10px;
+  font-weight: 500;
+}
+
+.status-select option[value="new"] {
+  color: rgb(121, 104, 197);
+}
+
+.status-select option[value="in-progress"] {
+  color: rgb(180, 160, 0);
+}
+
+.status-select option[value="completed"] {
+  color: rgb(0, 150, 50);
+}

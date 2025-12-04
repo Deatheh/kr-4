@@ -1,8 +1,27 @@
 body {
   background-color: rgb(213, 228, 228);
+  margin: 0;
+  padding: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Сброс стилей для всех элементов */
+* {
+  box-sizing: border-box;
+}
+
+/* Убираем прозрачность везде */
+div, section, article, header, footer, main, aside {
+  background-color: transparent;
+}
+
+/* Но для модального окна делаем исключение */
+.modal-content,
+.modal-content *:not(.modal-overlay) {
+  background-color: white !important;
+  opacity: 1 !important;
 }

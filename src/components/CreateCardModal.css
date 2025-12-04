@@ -1,0 +1,349 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content.create-modal {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 80vh; /* Уменьшил высоту */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  border-top: 5px solid #3498db;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.6rem; /* Уменьшил шрифт */
+  font-weight: 600;
+}
+
+.close-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 25px 30px;
+  overflow-y: auto;
+  flex: 1;
+  background-color: #ffffff;
+}
+
+.form-section {
+  margin-bottom: 25px;
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+}
+
+.form-section h3 {
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.1rem; /* Уменьшил шрифт */
+  font-weight: 600;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px 14px; /* Уменьшил padding */
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #2d3748;
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #a0aec0;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 60px; /* Уменьшил минимальную высоту */
+  line-height: 1.5;
+}
+
+.form-textarea.large {
+  min-height: 100px; /* Уменьшил для подробного описания */
+}
+
+.form-hint {
+  margin-top: 8px;
+  color: #718096;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Секция ссылок */
+.urls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.btn-add-url {
+  padding: 8px 16px;
+  background-color: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-add-url:hover {
+  background-color: #38a169;
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.urls-container {
+  margin-top: 10px;
+}
+
+.url-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.url-input-row {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.url-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.url-input.name {
+  flex: 0.4;
+}
+
+.url-input.url {
+  flex: 0.6;
+}
+
+.url-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.btn-remove-url {
+  padding: 8px 12px;
+  background-color: #fc8181;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-remove-url:hover {
+  background-color: #f56565;
+}
+
+.empty-links-message {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 2px dashed #cbd5e0;
+  border-radius: 8px;
+  color: #718096;
+  margin-top: 10px;
+}
+
+.empty-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  display: block;
+  opacity: 0.6;
+}
+
+.empty-links-message p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.modal-footer {
+  padding: 20px 30px;
+  border-top: 1px solid #eaeaea;
+  background-color: #f8f9fa;
+  flex-shrink: 0;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-cancel {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.btn-cancel:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+.btn-save {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Кастомный скроллбар */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .modal-content.create-modal {
+    max-height: 85vh;
+    margin: 10px;
+  }
+  
+  .url-input-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .url-input.name,
+  .url-input.url {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .footer-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
